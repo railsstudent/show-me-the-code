@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## How to build Angular custom elements
+
+```javascript
+# with npm
+npm run build:elements
+
+# or with yarn
+yarn build:elements
+```
+
+## How to run static website locally
+
+```javascript
+# with npm
+npm run start:static
+
+# or with yarn
+yarn start:static
+```
+
+* Open localhost:8888 to view the custom element
