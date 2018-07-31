@@ -11,6 +11,11 @@ $radius: 30px;
 }
 
 .counter-container {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
   button {
     &.btn {
       border-radius: 50%;

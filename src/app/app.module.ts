@@ -1,12 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, Injector } from "@angular/core";
 import { createCustomElement } from "@angular/elements";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppComponent } from "./app.component";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgbModule.forRoot()],
+  imports: [BrowserModule],
   providers: [],
   entryComponents: [AppComponent]
 })
