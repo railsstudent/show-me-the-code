@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation, Input } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -7,5 +7,17 @@ import { Component, ViewEncapsulation } from "@angular/core";
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
-  title = "show-me-the-code";
+  @Input()
+  framework: string;
+
+  @Input()
+  currentValue: number;
+
+  increment() {
+    this.currentValue++;
+  }
+
+  decrement() {
+    this.currentValue--;
+  }
 }

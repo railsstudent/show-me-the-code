@@ -1,1 +1,31 @@
 @import "~bootstrap/scss/bootstrap";
+
+$radius: 30px;
+
+.heading {
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    text-shadow: #FC0 1px 0 10px;
+  }
+}
+
+.counter-container {
+  button {
+    &.btn {
+      border-radius: 50%;
+      color: #fff;
+    }
+  }
+
+  .counter {
+    display: inline-block;
+    font-size: 30px;
+    border: 1px solid #4a4a4a;
+    width: 200px;
+    padding: 0 50px;
+    margin: 0 20px;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
