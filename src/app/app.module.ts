@@ -1,16 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule, Injector } from "@angular/core";
+import { createCustomElement } from "@angular/elements";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, NgbModule.forRoot()],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {}
+
+  ngDoBootstrap() {
+    const counterElement = createCustomElement(AppComponent, {
+      injector: this.injector
+    });
+    customElements.define("custom-counter", counterElement);
+    console.log("AppModule ngDoBootstrap");
+  }
+}
