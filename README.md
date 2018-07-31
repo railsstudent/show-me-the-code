@@ -47,3 +47,9 @@ yarn start:static
 ```
 
 * Open localhost:8888 to view the custom element
+
+# Tested in browsers
+* Chrome (ver. 67.0.3396.99)
+* Chromium
+* FireFox
+* Safari (ver. 11+)
