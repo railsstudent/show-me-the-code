@@ -33,11 +33,7 @@ export class AppComponent implements OnChanges {
     this.count++;
     console.log("increment count", this.count);
     this.cd.detectChanges();
-    if (this.isPrime()) {
-      this.primeFound.emit(`${this.count} is a prime number}.`);
-    } else {
-      this.primeFound.emit(`${this.count} is not a prime number}.`);
-    }
+    this.checkPrime();
   }
 
   decrement() {
@@ -47,15 +43,10 @@ export class AppComponent implements OnChanges {
     this.count--;
     console.log("decrement count", this.count);
     this.cd.detectChanges();
-    if (this.isPrime()) {
-      this.primeFound.emit(`${this.count} is a prime number}.`);
-    } else {
-      this.primeFound.emit(`${this.count} is not a prime number}.`);
-    }
+    this.checkPrime();
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("changes", changes);
     let hasChanged = false;
     if (changes.count.currentValue !== changes.count.previousValue) {
       this.count = changes.count.currentValue;
@@ -86,5 +77,13 @@ export class AppComponent implements OnChanges {
       i = i + 6;
     }
     return true;
+  }
+
+  private checkPrime() {
+    if (this.isPrime()) {
+      this.primeFound.emit(`${this.count} is a prime number.`);
+    } else {
+      this.primeFound.emit(`${this.count} is not a prime number.`);
+    }
   }
 }

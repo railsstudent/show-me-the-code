@@ -5,15 +5,27 @@
   <title>Angular Custom Element Time Converter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+    #msg {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
   <custom-counter id="counter"></custom-counter>
+  <div id="msg"></div>
   <script src="custom-counter.js" type="text/javascript"></script>
   <script>
-      var counter = document.getElementById('counter');
+      const counter = document.getElementById('counter');
+      const msg = document.getElementById('msg');
       counter.addEventListener('primeFound', function(e) {
-          console.log(e.target);
+        msg.innerHTML = e.detail;
       });
-  </script>    
+  </script>
 </body>
 </html>
