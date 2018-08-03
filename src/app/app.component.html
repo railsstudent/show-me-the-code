@@ -5,13 +5,11 @@
   </h1>
 </div>
 <div class="counter-container">
-  <button id="plus" class="btn" type="button" class="btn btn-success" (click)="increment()">
-    +
+  <button mat-fab color="primary" (click)="increment()" aria-label="Increment counter">
+    <fa-icon [icon]="faPlus"></fa-icon>
   </button>
   <div id="value" class="counter">{{count}}</div>
-  <button id="minus" class="btn" type="button" class="btn btn-warning" (click)="decrement()">
-     -
+  <button mat-fab color="warn" (click)="decrement()" aria-label="Decrement counter">
+    <fa-icon [icon]="faMinus"></fa-icon>
   </button>
 </div>
-
-

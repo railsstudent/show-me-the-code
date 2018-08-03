@@ -9,6 +9,8 @@ import {
   OnChanges,
   SimpleChanges
 } from "@angular/core";
+import { faPlus as plus, faMinus as minus } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: "app-root",
@@ -26,6 +28,9 @@ export class AppComponent implements OnChanges {
 
   @Output()
   primeFound = new EventEmitter<string>();
+
+  faPlus = plus;
+  faMinus = minus;
 
   constructor(private cd: ChangeDetectorRef) {}
 

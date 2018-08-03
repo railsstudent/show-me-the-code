@@ -1,4 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@fortawesome/fontawesome-svg-core/styles.css";
 
 $radius: 30px;
 
@@ -11,16 +12,13 @@ $radius: 30px;
 }
 
 .counter-container {
-  height: 25%;
+  height: 20%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
-  button {
-    &.btn {
-      border-radius: 50%;
-      color: #fff;
-    }
+  img {
+    color: #fff;
   }
 
   .counter {
